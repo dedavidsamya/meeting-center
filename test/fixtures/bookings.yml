@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  catering: false
+  seats: 1
+  beginning: 2021-09-15 19:57:57
+  end: 2021-09-15 19:57:57
+
+two:
+  name: MyString
+  email: MyString
+  catering: false
+  seats: 1
+  beginning: 2021-09-15 19:57:57
+  end: 2021-09-15 19:57:57

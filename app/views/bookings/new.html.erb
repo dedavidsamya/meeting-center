@@ -1,0 +1,25 @@
+<%#= form_with model: @booking do |form| %>
+  <%#= form.date_select :beginning %>
+  <%#= form.date_select :end %>
+  <%#= form.select :catering, ["Ja", "Nein"] %>
+  <%#= form.submit "Book!" %>
+
+<%# end %>
+
+
+<form action="/bookings" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="beginning">Beginn des gewünschten Buchungszeitraums</label>
+  <input type="date" name="booking[beginning]">
+  <label for="end">Ende des gewünschten Buchungszeitraums</label>
+  <input type="date" name="booking[end]">
+  <label for="seats">Gewünschte Bestuhlung</label>
+  <input type="text" name="booking[seats]" placeholder="seats">
+  <label for="catering">Mit Catering?</label>
+  <input type="text" name="booking[catering]">
+  <label for="name">Name</label>
+  <input type="text" name="booking[name]">
+  <label for="email">E-mail Adresse</label>
+  <input type="text" name="booking[email]">
+  <input type="submit" value="Fertig!">
+</form>

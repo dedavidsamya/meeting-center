@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  ## Here I will define the CRUD methods for my bookings
+
+  ## Here I define the CRUD methods for my bookings
 
   def index # all bookings
     @bookings = Booking.all
@@ -17,23 +18,22 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.save
     redirect_to booking_path(@booking)
-
   end
 
-  def edit
+  def edit # this is the method get, I select the booking I want to update
     @booking = Booking.find(params[:id])
   end
 
-  def update
+  def update # this is the method patch, after selecting what I want to update, I send the input and update the data
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
   end
 
-  def destroy
+  def destroy # this is the method delete and it asks the user if he/she is sure of the action. When deleted, redirects to the homepage
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to booking_path
+    redirect_to new_booking_path(@booking)
   end
 
   private #strong params! It passes as params only the permitted keys - this prevents external intereference (hacking)

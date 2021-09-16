@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :bookings # rails creates the RESTful routes automatically
 end
 
-  # Here is how I would create it manually:
+  # Here is how I would create the routes manually:
 
   # # Read all the bookings
   # get '/bookings', to: 'bookings#index'

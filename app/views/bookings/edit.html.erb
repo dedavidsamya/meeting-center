@@ -1,0 +1,10 @@
+<%= simple_form_for @booking do |f| %>
+<%= f.input :beginning, :label => "Beginn des gewünschten Buchungszeitraums"%>
+<%= f.input :end, :label => "Ende des gewünschten Buchungszeitraums" %>
+<%= f.input :seats, :label => "Gewünschte Bestuhlung" %>
+<%= f.input :catering, :label => "Mit Catering?" %>
+<%= f.input :name, :label => "Name" %>
+<%= f.input :email, :label => "E-mail Adresse" %>
+<%= submit_tag "Fertig!" %>
+<% end %>
+

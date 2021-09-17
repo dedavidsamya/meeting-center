@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root "bookings#new"
+  root "bookings#home"
   resources :bookings # rails creates the RESTful routes automatically
+
+  get 'bookings', to: 'bookings#index'
+
 end
 
   # Here is how I would create the routes manually:

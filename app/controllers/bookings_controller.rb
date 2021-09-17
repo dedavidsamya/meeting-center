@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
 
-  ## Here I define the CRUD methods for my bookings
+  def home
+
+  end
 
   def index # all bookings
     @bookings = Booking.all
@@ -8,6 +10,8 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id]) # Here I want to select (and show) one specific booking, thus the :id key
+    @sunrise = @booking.sunrise
+    @sunset = @booking.sunset
   end
 
   def new

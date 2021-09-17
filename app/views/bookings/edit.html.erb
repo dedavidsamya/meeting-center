@@ -1,10 +1,15 @@
-<%= simple_form_for @booking do |f| %>
-<%= f.input :beginning, :label => "Beginn des gewünschten Buchungszeitraums"%>
-<%= f.input :end, :label => "Ende des gewünschten Buchungszeitraums" %>
-<%= f.input :seats, :label => "Gewünschte Bestuhlung" %>
-<%= f.input :catering, :label => "Mit Catering?" %>
-<%= f.input :name, :label => "Name" %>
-<%= f.input :email, :label => "E-mail Adresse" %>
-<%= submit_tag "Fertig!" %>
-<% end %>
-
+<div class="container container-custom">
+  <div class="row row-custom">
+    <div class="col-6 centering form rounded-input mt-3 p-4 shadow mb-3">
+      <%= simple_form_for @booking do |f| %>
+      <%= f.input :beginning, :label => "Beginn des gewünschten Buchungszeitraums"%>
+      <%= f.input :end, :label => "Ende des gewünschten Buchungszeitraums" %>
+      <%= f.input :seats, :label => "Gewünschte Bestuhlung (Anzahl)" %>
+      <%= f.input :catering, :label => "Mit Catering?" %>
+      <%= f.input :name, :label => "Name" %>
+      <%= f.input :email, :label => "E-Mail Adresse" %>
+      <%= f.submit "Fertig!", class: 'btn btn-custom' %>
+      <% end %>
+    </div>
+  </div>
+</div>

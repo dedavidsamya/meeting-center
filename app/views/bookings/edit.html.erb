@@ -2,13 +2,17 @@
   <div class="row row-custom">
     <div class="col-6 centering form rounded-input mt-3 p-4 shadow mb-3">
       <%= simple_form_for @booking do |f| %>
-      <%= f.input :beginning, :label => "Beginn des gewünschten Buchungszeitraums"%>
-      <%= f.input :end, :label => "Ende des gewünschten Buchungszeitraums" %>
-      <%= f.input :seats, :label => "Gewünschte Bestuhlung (Anzahl)" %>
-      <%= f.input :catering, :label => "Mit Catering?" %>
+      <p>Please select the desired room (they can be selected separately or together):</p>
+      <%= f.input :sunset, :label => "Sunset - 76m²" %>
+      <%= f.input :sunrise, :label => "Sunrise - 82m²" %>
+      <%= f.input :beginning, :label => "Start of the desired booking period"%>
+      <%= f.input :end, :label => "End of the desired booking period" %>
+      <%= f.input :seats, :label => "Number of seats" %>
+      <p>Please select if you desire the catering service:</p>
+      <%= f.input :catering, :label => "Catering" %>
       <%= f.input :name, :label => "Name" %>
-      <%= f.input :email, :label => "E-Mail Adresse" %>
-      <%= f.submit "Fertig!", class: 'btn btn-custom' %>
+      <%= f.input :email, :label => "E-mail adress" %>
+      <%= f.submit "Book!", class: 'btn btn-custom' %>
       <% end %>
     </div>
   </div>

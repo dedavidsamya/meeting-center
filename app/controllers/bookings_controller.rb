@@ -39,7 +39,7 @@ class BookingsController < ApplicationController
   private #strong params! It passes as params only the permitted keys - this prevents external intereference (hacking)
 
   def booking_params
-    params.require(:booking).permit(:beginning, :end, :name, :email, :catering, :seats)
+    params.require(:booking).permit(:beginning, :end, :name, :email, :catering, :seats, :sunset, :sunrise)
   end
 
 end

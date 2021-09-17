@@ -1,11 +1,15 @@
 <div class="container container-custom">
   <div class="row row-custom">
     <div class="col-6 centering form rounded-input mt-3 p-4 shadow mb-3">
-     <h1> You have booked <%= @booking.seats %> seats </h1>
-
-    <%= link_to 'Buchung bearbeiten', edit_booking_path(@booking) %>
-    <%= link_to 'Buchung stornieren', booking_path(@booking), method: :delete, data: { confirm: 'Sind Sie sicher?'} %>
-    <%= link_to 'Zurück', new_booking_path %>
+     <h1> Thank you, <%= @booking.name%>!</h1>
+     <p>Your request has been received.</p>
+     <p>Here is an overview of your booking: </p>
+     <p>Start date: <%= @booking.beginning %></p>
+     <p>End date: <%= @booking.end %></p>
+     <p>Number of seats: <%= @booking.seats %>.</p>
+     <%= link_to 'Edit request', edit_booking_path(@booking), class: "btn btn-main-small" %>
+     <%= link_to 'Delete request', booking_path(@booking), class: "btn btn-main-small",  method: :delete, data: { confirm: 'Are you sure you want to delete your booking?'} %>
+     <%= link_to 'Make new request', new_booking_path, class: "btn btn-main-small" %>
     </div>
   </div>
 </div>
